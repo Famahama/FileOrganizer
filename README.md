@@ -6,9 +6,9 @@ A GUI tool for creating and reorganising project folders. Supports 5 project typ
 
 ## For Team Members
 
-You only need one file: **`OPEN.bat`**
+You only need one file: **`00.FileOrganizer.bat`**
 
-1. Drop `OPEN.bat` into your project folder
+1. Drop `00.FileOrganizer.bat` into your project folder
 2. Double-click it
 3. The tool opens with your folder pre-filled
 4. Pick your project type and mode, then hit **Preview** or **Run**
@@ -295,4 +295,4 @@ git commit -m "describe what changed"
 git push
 ```
 
-The team gets the update automatically next time they open `OPEN.bat`.
+The team gets the update automatically next time they open `00.FileOrganizer.bat`.
