@@ -13,7 +13,7 @@ from pathlib import Path
 # Each type has a folder structure and a set of file-sorting rules.
 # ─────────────────────────────────────────────────────────────────────────────
 
-TYPES = {
+ARCHIVED_TYPES = {
     "2d": {
         "label":    "2D Motion Graphics",
         "subtitle": "AE  ·  Illustrator  ·  Photoshop",
@@ -142,6 +142,9 @@ TYPES = {
         "folder_moves": [],
     },
 
+}
+
+TYPES = {
     "gfx": {
         "label":    "Graphic Design",
         "subtitle": "Illustrator  ·  Photoshop",
@@ -183,6 +186,9 @@ TYPES = {
         "folder_moves": [],
     },
 
+}
+
+ARCHIVED_TYPES.update({
     "vfx": {
         "label":    "VFX Compositing",
         "subtitle": "All tools combined",
@@ -237,7 +243,7 @@ TYPES = {
             ("adobe after effects auto-save", "00_Project_Files/AfterEffects/ae_cache"),
         ],
     },
-}
+})
 
 # ─────────────────────────────────────────────────────────────────────────────
 # ENGINE
@@ -490,7 +496,7 @@ def run_gui(pre_folder=""):
     win.configure(bg=BG)
     win.resizable(False, False)
 
-    type_var   = tk.StringVar(value="2d")
+    type_var   = tk.StringVar(value="gfx")
     mode_var   = tk.StringVar(value="create")
     folder_var = tk.StringVar(value=pre_folder)
 
@@ -514,11 +520,7 @@ def run_gui(pre_folder=""):
     type_card = card_frame()
 
     for key, title, sub in [
-        ("2d",   "2D Motion Graphics", "AE  ·  Illustrator  ·  Photoshop"),
-        ("3d",   "3D Animation",       "Blender  ·  AE  ·  Illustrator"),
-        ("edit", "Video Editing",      "DaVinci Resolve  ·  Audition  ·  AE"),
         ("gfx",  "Graphic Design",     "Illustrator  ·  Photoshop"),
-        ("vfx",  "VFX Compositing",    "All tools combined"),
     ]:
         row = tk.Frame(type_card, bg=CARD)
         row.pack(fill="x", padx=8, pady=3)
@@ -612,7 +614,7 @@ def run_gui(pre_folder=""):
         show_tree(type_var.get())
 
     type_var.trace_add("write", on_type_change)
-    show_tree("2d")  # default preview
+    show_tree("gfx")  # default preview
 
     # ── Buttons ──────────────────────────────────────────────────────────────
     btn_row = tk.Frame(win, bg=BG)
