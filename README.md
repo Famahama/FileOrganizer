@@ -47,7 +47,9 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
     └─ SFX/
   └─ Footage/
     └─ Raw/
+      └─ CAM_A/
     └─ Proxies/
+      └─ CAM_A/
   └─ Images/
     └─ References/
   └─ Fonts/
@@ -85,7 +87,9 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
     └─ VO/
   └─ Footage/
     └─ Raw/
+      └─ CAM_A/
     └─ Proxies/
+      └─ CAM_A/
   └─ Images/
     └─ References/
     └─ Textures/
@@ -120,7 +124,9 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
 01_Media/
   └─ Footage/
     └─ Raw/
+      └─ CAM_A/
     └─ Proxies/
+      └─ CAM_A/
   └─ Audio/
     └─ Music/
     └─ SFX/
@@ -202,6 +208,9 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
     └─ VO/
   └─ Footage/
     └─ Raw/
+      └─ CAM_A/
+    └─ Proxies/
+      └─ CAM_A/
     └─ Greenscreen/
   └─ Images/
     └─ References/
@@ -225,6 +234,10 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
   └─ Feedback/
 05_Handoff/
 ```
+
+---
+
+> **Multiple cameras:** `CAM_A` is created by default. For additional cameras, duplicate the folder and rename it — e.g. `CAM_B`, `CAM_C`. Create matching folders in both `Raw/` and `Proxies/` so highres and proxy files stay paired.
 
 ---
 
@@ -268,15 +281,17 @@ Python only needs to be installed once per machine.
 
 This installs Python and automatically adds it to PATH in one step.
 
-1. Press `Windows + R`, type `cmd`, press Enter
-2. Paste this command and press Enter:
+**Step 1.** Press `Windows + R`, type `cmd`, and press Enter
 
-```
+**Step 2.** Paste and run this command:
+
+```cmd
 winget install -e --id Python.Python.3 --override "PrependPath=1 Include_pip=1 /quiet"
 ```
 
-3. Wait for it to finish, then **close and reopen CMD**
-4. Type `python --version` to confirm it worked — you should see something like `Python 3.x.x`
+**Step 3.** Wait for it to finish, then close and reopen CMD
+
+**Step 4.** Type `python --version` to confirm — you should see `Python 3.x.x`
 
 ---
 
