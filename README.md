@@ -98,6 +98,26 @@ Python only needs to be installed once per machine.
 
 This installs Python and automatically adds it to PATH in one step.
 
+#### Windows 11
+
+Winget comes pre-installed on Windows 11.
+
+**Step 1.** Right-click the **Start button** and select **Terminal**
+
+**Step 2.** Paste and run this command:
+
+```cmd
+winget install -e --id Python.Python.3 --override "PrependPath=1 Include_pip=1 /quiet"
+```
+
+**Step 3.** Wait for it to finish, then close and reopen Terminal
+
+**Step 4.** Type `python --version` to confirm — you should see `Python 3.x.x`
+
+#### Windows 10
+
+Winget may not be pre-installed. If the command above gives an error, install winget first from the [Microsoft Store](https://www.microsoft.com/store/productId/9NBLGGH4NNS1), then repeat the steps above.
+
 **Step 1.** Press `Windows + R`, type `cmd`, and press Enter
 
 **Step 2.** Paste and run this command:
