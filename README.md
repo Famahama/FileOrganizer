@@ -15,7 +15,7 @@ You only need one file: **`OPEN.bat`**
 
 The tool updates automatically every time you open it — no need to download new versions.
 
-> Requires Python to be installed on your machine.
+> Requires Python to be installed on your machine. See [Installing Python](#installing-python) below if you haven't done this yet.
 
 ---
 
@@ -253,6 +253,31 @@ When using **Reorganise**, files are matched by extension and filename. First ma
 | Numbered image sequence folder | ≥70% numbered files | `02_Renders/Blender/SEQ/` *(moved as a unit)* |
 
 Files that don't match any rule are left in place and listed in the summary.
+
+---
+
+## Installing Python
+
+Python only needs to be installed once per machine.
+
+1. Go to **[python.org/downloads](https://www.python.org/downloads/)**
+2. Click the **Download Python** button (latest version)
+3. Run the installer
+4. **Important:** On the first screen, tick the box that says **"Add python.exe to PATH"** before clicking Install
+
+   ![Add to PATH checkbox must be ticked](https://www.python.org/static/img/python-logo.png)
+
+   > If you skip this step, the tool won't open. You'll need to uninstall and reinstall Python with the box ticked.
+
+5. Click **Install Now** and wait for it to finish
+6. Click **Close**
+
+**To verify it worked:**
+- Press `Windows + R`, type `cmd`, press Enter
+- Type `python --version` and press Enter
+- You should see something like `Python 3.x.x`
+
+If you see an error instead, Python was not added to PATH — uninstall it from **Control Panel → Programs** and reinstall with the checkbox ticked.
 
 ---
 
