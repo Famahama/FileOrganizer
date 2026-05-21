@@ -151,10 +151,9 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
 ### Graphic Design
 *Illustrator · Photoshop*
 ```
-00_Project_Files/
+01_Assets/
   └─ Illustrator/
   └─ Photoshop/
-01_Assets/
   └─ Images/
     └─ References/
     └─ Stock/

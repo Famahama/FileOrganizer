@@ -146,8 +146,8 @@ TYPES = {
         "label":    "Graphic Design",
         "subtitle": "Illustrator  ·  Photoshop",
         "structure": [
-            "00_Project_Files/Illustrator",
-            "00_Project_Files/Photoshop",
+            "01_Assets/Illustrator",
+            "01_Assets/Photoshop",
             "01_Assets/Images/References",
             "01_Assets/Images/Stock",
             "01_Assets/Fonts",
@@ -164,8 +164,8 @@ TYPES = {
             "04_Handoff",
         ],
         "rules": [
-            {"dest": "00_Project_Files/Illustrator",  "exts": [".ai"],                               "in_folder": "", "name_has": ""},
-            {"dest": "00_Project_Files/Photoshop",    "exts": [".psd"],                              "in_folder": "", "name_has": ""},
+            {"dest": "01_Assets/Illustrator",         "exts": [".ai"],                               "in_folder": "", "name_has": ""},
+            {"dest": "01_Assets/Photoshop",           "exts": [".psd"],                              "in_folder": "", "name_has": ""},
             {"dest": "02_Exports/Brand",              "exts": [".svg", ".pdf", ".png"],              "in_folder": "", "name_has": "logo"},
             {"dest": "02_Exports/Digital/Social",     "exts": [".png", ".jpg", ".jpeg"],             "in_folder": "", "name_has": "social"},
             {"dest": "02_Exports/Digital/Web",        "exts": [".png", ".jpg", ".jpeg", ".svg"],     "in_folder": "", "name_has": "web"},
