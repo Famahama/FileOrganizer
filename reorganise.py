@@ -146,6 +146,8 @@ TYPES = {
         "label":    "Graphic Design",
         "subtitle": "Illustrator  ·  Photoshop",
         "structure": [
+            "00_Project_Files/Illustrator",
+            "00_Project_Files/Photoshop",
             "01_Assets/Illustrator",
             "01_Assets/Photoshop",
             "01_Assets/Images/References",
@@ -164,6 +166,8 @@ TYPES = {
             "04_Handoff",
         ],
         "rules": [
+            {"dest": "00_Project_Files/Illustrator",  "exts": [".ai"],                               "in_folder": "", "name_has": "", "name_regex": r"v[_-]\d{2}"},
+            {"dest": "00_Project_Files/Photoshop",    "exts": [".psd"],                              "in_folder": "", "name_has": "", "name_regex": r"v[_-]\d{2}"},
             {"dest": "01_Assets/Illustrator",         "exts": [".ai"],                               "in_folder": "", "name_has": ""},
             {"dest": "01_Assets/Photoshop",           "exts": [".psd"],                              "in_folder": "", "name_has": ""},
             {"dest": "02_Exports/Brand",              "exts": [".svg", ".pdf", ".png"],              "in_folder": "", "name_has": "logo"},
@@ -286,6 +290,8 @@ def matches(file: Path, rule: dict) -> bool:
     if rule["in_folder"] and rule["in_folder"].lower() not in parents_lower:
         return False
     if rule["name_has"] and rule["name_has"].lower() not in name_lower:
+        return False
+    if rule.get("name_regex") and not _re.search(rule["name_regex"], file.name, _re.IGNORECASE):
         return False
     return True
 

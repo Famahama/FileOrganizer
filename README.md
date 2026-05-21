@@ -151,6 +151,9 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
 ### Graphic Design
 *Illustrator · Photoshop*
 ```
+00_Project_Files/
+  └─ Illustrator/
+  └─ Photoshop/
 01_Assets/
   └─ Illustrator/
   └─ Photoshop/
@@ -174,6 +177,8 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
   └─ Feedback/
 04_Handoff/
 ```
+
+> **Versioned files** (e.g. `poster_v_01.ai`, `logo_v-03.psd`) go to `00_Project_Files/`. All other `.ai` and `.psd` files go to `01_Assets/`.
 
 ---
 
