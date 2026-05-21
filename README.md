@@ -1,6 +1,6 @@
-# File Organizer — Progresif Media
+# File Organizer
 
-A GUI tool for creating and reorganising project folders. Supports 5 project types across animation, editing, and design.
+A GUI tool for creating and reorganising project folders for Graphic Design projects.
 
 ---
 
@@ -11,7 +11,7 @@ You only need one file: **`00.FileOrganizer.bat`**
 1. Drop `00.FileOrganizer.bat` into your project folder
 2. Double-click it
 3. The tool opens with your folder pre-filled
-4. Pick your project type and mode, then hit **Preview** or **Run**
+4. Pick your mode, then hit **Preview** or **Run**
 
 The tool updates automatically every time you open it — no need to download new versions.
 
@@ -30,129 +30,7 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
 
 ---
 
-## Project Types
-
-### 2D Motion Graphics
-*AE · Illustrator · Photoshop*
-```
-00_Project_Files/
-  └─ AfterEffects/
-    └─ projects/
-    └─ ae_cache/
-  └─ Illustrator/
-  └─ Photoshop/
-01_Assets/
-  └─ Audio/
-    └─ Music/
-    └─ SFX/
-  └─ Footage/
-    └─ Raw/
-      └─ CAM_A/
-    └─ Proxies/
-      └─ CAM_A/
-  └─ Images/
-    └─ References/
-  └─ Fonts/
-02_Renders/
-  └─ AE_Previews/
-03_Exports/
-  └─ Drafts/
-    └─ v001/
-  └─ Finals/
-04_Docs/
-  └─ Brief/
-  └─ References/
-  └─ Feedback/
-05_Handoff/
-```
-
----
-
-### 3D Animation
-*Blender · AE · Illustrator*
-```
-00_Project_Files/
-  └─ AfterEffects/
-    └─ projects/
-    └─ ae_cache/
-  └─ Blender/
-    └─ scenes/
-    └─ textures/
-  └─ Illustrator/
-  └─ Photoshop/
-01_Assets/
-  └─ Audio/
-    └─ Music/
-    └─ SFX/
-    └─ VO/
-  └─ Footage/
-    └─ Raw/
-      └─ CAM_A/
-    └─ Proxies/
-      └─ CAM_A/
-  └─ Images/
-    └─ References/
-    └─ Textures/
-  └─ HDRI/
-  └─ Fonts/
-02_Renders/
-  └─ Blender/
-    └─ EXR/
-    └─ Preview/
-    └─ SEQ/
-  └─ AE_Previews/
-03_Exports/
-  └─ Drafts/
-    └─ v001/
-  └─ Finals/
-04_Docs/
-  └─ Brief/
-  └─ References/
-  └─ Feedback/
-05_Handoff/
-```
-
----
-
-### Video Editing
-*DaVinci Resolve · Audition · AE*
-```
-00_Project_Files/
-  └─ DaVinci/
-  └─ AfterEffects/
-  └─ Audition/
-01_Media/
-  └─ Footage/
-    └─ Raw/
-      └─ CAM_A/
-    └─ Proxies/
-      └─ CAM_A/
-  └─ Audio/
-    └─ Music/
-    └─ SFX/
-    └─ VO/
-    └─ Stems/
-  └─ Graphics/
-  └─ Stills/
-02_Cache/
-  └─ DaVinci_Cache/
-  └─ Optimized_Media/
-03_Exports/
-  └─ Drafts/
-    └─ v001/
-  └─ Finals/
-04_Audio_Mix/
-  └─ Sessions/
-  └─ Stems/
-  └─ Finals/
-05_Docs/
-  └─ Brief/
-  └─ Scripts/
-  └─ Feedback/
-06_From_Animation/
-```
-
----
+## Folder Structure
 
 ### Graphic Design
 *Illustrator · Photoshop*
@@ -188,86 +66,25 @@ Run **Preview** first to see what will move without touching anything. Then **Ru
 
 ---
 
-### VFX Compositing
-*All tools combined*
-```
-00_Project_Files/
-  └─ AfterEffects/
-    └─ projects/
-    └─ ae_cache/
-  └─ Blender/
-    └─ scenes/
-    └─ textures/
-  └─ DaVinci/
-  └─ Illustrator/
-  └─ Photoshop/
-01_Assets/
-  └─ Audio/
-    └─ Music/
-    └─ SFX/
-    └─ VO/
-  └─ Footage/
-    └─ Raw/
-      └─ CAM_A/
-    └─ Proxies/
-      └─ CAM_A/
-    └─ Greenscreen/
-  └─ Images/
-    └─ References/
-    └─ Textures/
-  └─ HDRI/
-  └─ Fonts/
-02_Renders/
-  └─ Blender/
-    └─ EXR/
-    └─ Preview/
-    └─ SEQ/
-  └─ AE_Previews/
-  └─ VFX_Passes/
-03_Exports/
-  └─ Drafts/
-    └─ v001/
-  └─ Finals/
-04_Docs/
-  └─ Brief/
-  └─ References/
-  └─ Feedback/
-05_Handoff/
-```
-
----
-
-> **Multiple cameras:** `CAM_A` is created by default. For additional cameras, duplicate the folder and rename it — e.g. `CAM_B`, `CAM_C`. Create matching folders in both `Raw/` and `Proxies/` so highres and proxy files stay paired.
-
----
-
 ## File Sorting Rules
 
 When using **Reorganise**, files are matched by extension and filename. First match wins.
 
 | Extension | Condition | Goes to |
 |---|---|---|
-| `.aep` | — | `00_Project_Files/AfterEffects/projects/` |
-| `.blend` `.blend1` `.fspy` | — | `00_Project_Files/Blender/scenes/` |
-| `.ai` | — | `00_Project_Files/Illustrator/` |
-| `.psd` | — | `00_Project_Files/Photoshop/` |
-| `.drp` `.drt` | — | `00_Project_Files/DaVinci/` |
-| `.sesx` | — | `00_Project_Files/Audition/` |
-| `.mp4` `.mov` `.avi` | name has `final` | `03_Exports/Finals/` |
-| `.mp4` `.mov` `.avi` | — | `03_Exports/Drafts/` |
-| `.mp3` | — | `01_Assets/Audio/Music/` |
-| `.wav` | name has `vo` or `voice` | `01_Assets/Audio/VO/` |
-| `.wav` | in a folder named `fx` | `01_Assets/Audio/SFX/` |
-| `.pdf` | name has `logo` | `02_Exports/Brand/` *(GFX only)* |
-| `.pdf` | name has `print` | `02_Exports/Print/` *(GFX only)* |
+| `.ai` | name has `v_00`–`v_99` or `v-00`–`v-99` | `00_Project_Files/Illustrator/` |
+| `.psd` | name has `v_00`–`v_99` or `v-00`–`v-99` | `00_Project_Files/Photoshop/` |
+| `.ai` | — | `01_Assets/Illustrator/` |
+| `.psd` | — | `01_Assets/Photoshop/` |
+| `.svg` `.pdf` `.png` | name has `logo` | `02_Exports/Brand/` |
+| `.png` `.jpg` `.jpeg` | name has `social` | `02_Exports/Digital/Social/` |
+| `.png` `.jpg` `.jpeg` `.svg` | name has `web` | `02_Exports/Digital/Web/` |
+| `.pdf` | name has `print` | `02_Exports/Print/` |
 | `.pdf` | name has `brief` | `03_Docs/Brief/` |
 | `.pdf` | — | `03_Docs/References/` |
-| `.svg` | name has `logo` or `web` | `02_Exports/Brand/` or `Digital/Web/` |
 | `.svg` | — | `01_Assets/Icons/` |
-| `.ttf` `.otf` `.woff` | — | `01_Assets/Fonts/` |
-| `.png` `.jpg` `.jpeg` | in a folder named `texture` | `01_Assets/Images/Textures/` |
-| `.png` `.jpg` `.jpeg` | — | `01_Assets/Images/References/` |
-| Numbered image sequence folder | ≥70% numbered files | `02_Renders/Blender/SEQ/` *(moved as a unit)* |
+| `.ttf` `.otf` `.woff` `.woff2` | — | `01_Assets/Fonts/` |
+| `.png` `.jpg` `.jpeg` `.webp` | — | `01_Assets/Images/References/` |
 
 Files that don't match any rule are left in place and listed in the summary.
 
