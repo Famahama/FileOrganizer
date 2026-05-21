@@ -264,24 +264,38 @@ Files that don't match any rule are left in place and listed in the summary.
 
 Python only needs to be installed once per machine.
 
-1. Go to **[python.org/downloads](https://www.python.org/downloads/)**
-2. Click the **Download Python** button (latest version)
-3. Run the installer
-4. **Important:** On the first screen, tick the box that says **"Add python.exe to PATH"** before clicking Install
+### Option 1 — Command line (recommended)
 
-   ![Add to PATH checkbox must be ticked](https://www.python.org/static/img/python-logo.png)
+This installs Python and automatically adds it to PATH in one step.
 
-   > If you skip this step, the tool won't open. You'll need to uninstall and reinstall Python with the box ticked.
+1. Press `Windows + R`, type `cmd`, press Enter
+2. Paste this command and press Enter:
 
-5. Click **Install Now** and wait for it to finish
-6. Click **Close**
+```
+winget install -e --id Python.Python.3 --override "PrependPath=1 Include_pip=1 /quiet"
+```
 
-**To verify it worked:**
-- Press `Windows + R`, type `cmd`, press Enter
+3. Wait for it to finish, then **close and reopen CMD**
+4. Type `python --version` to confirm it worked — you should see something like `Python 3.x.x`
+
+---
+
+### Option 2 — Manual installer
+
+1. Go to **[python.org/downloads](https://www.python.org/downloads/)** and download the latest version
+2. Run the installer
+3. **Important:** Tick **"Add python.exe to PATH"** on the first screen before clicking Install Now
+
+   > If you miss this step, the tool won't open. Uninstall Python from **Control Panel → Programs** and reinstall with the box ticked.
+
+4. Click **Install Now**, wait, then click **Close**
+
+---
+
+**To verify either method worked:**
+- Open CMD (`Windows + R` → type `cmd` → Enter)
 - Type `python --version` and press Enter
-- You should see something like `Python 3.x.x`
-
-If you see an error instead, Python was not added to PATH — uninstall it from **Control Panel → Programs** and reinstall with the checkbox ticked.
+- You should see `Python 3.x.x`
 
 ---
 
